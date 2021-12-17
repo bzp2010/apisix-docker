@@ -47,7 +47,7 @@ COPY --from=pre-build /usr/local/apisix-dashboard .
 WORKDIR /usr/local/apisix-dashboard/web
 
 RUN if [ "$ENABLE_PROXY" = "true" ] ; then yarn config set registry https://registry.npm.taobao.org/ ; fi \
-    && yarn install --network-timeout 100000 \
+    && yarn install --network-timeout 200000 \
     && yarn build
 
 FROM alpine:latest as prod

@@ -69,4 +69,4 @@ RUN mkdir logs
 
 EXPOSE 9000
 
-CMD [ "/usr/local/apisix-dashboard/manager-api" ]
+ENTRYPOINT [ "/usr/local/apisix-dashboard/manager-api" ]
